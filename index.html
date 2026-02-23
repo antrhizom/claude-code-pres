@@ -132,6 +132,28 @@
   .check-list li { display: flex; gap: 14px; align-items: flex-start; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; font-size: clamp(13px, 1.3vw, 16px); }
   .check-list li .ic { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
 
+  /* ── Quote slide ── */
+  .quote-wrap { display: flex; flex-direction: column; gap: 32px; max-width: 820px; width: 100%; margin-top: 36px; }
+  .quote-block {
+    background: var(--surface); border: 1px solid var(--border);
+    border-left: 4px solid var(--green); border-radius: 12px;
+    padding: 28px 32px;
+  }
+  .quote-block.blue-accent { border-left-color: var(--blue); }
+  .quote-text {
+    font-size: clamp(18px, 2.2vw, 28px); font-weight: 700; line-height: 1.35;
+    color: var(--text); margin-bottom: 12px;
+  }
+  .quote-text em { font-style: normal; color: var(--orange); }
+  .quote-source {
+    font-size: clamp(11px, 1.1vw, 14px); color: var(--muted); font-style: italic;
+  }
+  .faz-badge {
+    display: inline-block; background: #1a1a1a; border: 1px solid #555;
+    border-radius: 4px; padding: 2px 8px; font-size: 12px; font-weight: 700;
+    color: #ccc; letter-spacing: .05em; margin-right: 6px; font-style: normal;
+  }
+
   /* ── Cover special ── */
   .cover-badge {
     display: inline-flex; align-items: center; gap: 8px;
@@ -170,8 +192,30 @@
 
 <div class="deck" id="deck">
 
-  <!-- ══ Slide 1: Cover ══ -->
+  <!-- ══ Slide 0: Start – FAZ-Zitate ══ -->
   <div class="slide active">
+    <div class="label">Kontext</div>
+    <h2>Was gerade in der <span class="gradient">KI-Welt passiert</span></h2>
+    <div class="quote-wrap">
+      <div class="quote-block">
+        <div class="quote-text">
+          Adobe <em>−7%</em>, Salesforce <em>−8%</em>, Thomson Reuters <em>−20%</em> –
+          weil KI-Agenten ihre Kernprodukte ersetzen könnten.
+        </div>
+        <div class="quote-source"><span class="faz-badge">FAZ</span> Börsenkurse nach KI-Ankündigungen, 2025</div>
+      </div>
+      <div class="quote-block blue-accent">
+        <div class="quote-text" style="color: var(--blue);">
+          «Wir sind wie in den ersten Wochen der Pandemie –
+          die meisten merken noch nicht, wie schnell es kommt.»
+        </div>
+        <div class="quote-source"><span class="faz-badge">FAZ</span> Matt Shumer, KI-CEO, 2025</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ Slide 1: Cover ══ -->
+  <div class="slide">
     <div class="cover-badge">🤖 <span>Claude Code</span> &nbsp;·&nbsp; Weiterbildung DLH · 2025</div>
     <div class="label">Live-Demo</div>
     <h1>Wie eine KI<br><span class="gradient">selbständig entwickelt</span></h1>
